@@ -17,7 +17,7 @@ public:
 	
 	TileComponent() = default;
 	~TileComponent();
-	TileComponent(int srcX, int srcY, int xpos, int ypos, int tsize, int tscale, std::string id);
+	TileComponent(int srcX, int srcY, int xpos, int ypos, int tsize, int tscale,const std::string& id);
 	void init() override;
 	void update() override;
 	void draw() ;
@@ -28,8 +28,8 @@ public:
 
 
 private:
-	SDL_Texture * m_pTexture;
+	SDL_Texture * m_pTexture = nullptr;
 	SDL_Rect m_SrcRect, m_DestRect;
 	Vector2D m_Position;
-	RendererComponent* m_pRenderer;
+	RendererComponent* m_pRenderer = nullptr;
 };

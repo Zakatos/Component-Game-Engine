@@ -30,14 +30,14 @@ private:
 	void Wander();
 	void Chase();
 	void HandleDeath();
-	TransformComponent* m_pTransform;
-	SpriteComponent* m_pSprite;
-	InputComponent* m_InputComponet;
+	TransformComponent* m_pTransform = nullptr;
+	SpriteComponent* m_pSprite = nullptr;
+	InputComponent* m_InputComponet = nullptr;
 	State m_State;
-	GhostPhysicsComponent* m_pPhysics;
+	GhostPhysicsComponent* m_pPhysics = nullptr;
 	std::string m_SpriteName;	
 	Direction m_direction;
 	Vector2D m_StartPosition;
-	Command* m_Command;
+	Command* m_Command = nullptr;
 };
 

@@ -3,9 +3,7 @@
 #include "AiComponent.h"
 
 GhostPhysicsComponent::~GhostPhysicsComponent()
-{
-	
-	
+{	
 }
 
 void GhostPhysicsComponent::init()

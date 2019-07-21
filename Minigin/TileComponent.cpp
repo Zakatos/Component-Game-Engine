@@ -3,7 +3,7 @@
 #include "AssetManager.h"
 #include "RendererComponent.h"
 
-TileComponent::TileComponent(int srcX, int srcY, int xpos, int ypos, int tsize, int tscale, std::string id)
+TileComponent::TileComponent(int srcX, int srcY, int xpos, int ypos, int tsize, int tscale,const std::string& id)
 {
 	m_pTexture = Game::m_sAssets->GetTexture(id);
 

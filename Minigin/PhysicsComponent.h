@@ -23,10 +23,10 @@ public:
 protected:
 	Vector2D m_Velocity{1.f,1.f};
 	Vector2D m_LastPos;
-	TransformComponent* m_pTransform;
-	float m_VectorRate;
+	TransformComponent* m_pTransform = nullptr;
+	float m_VectorRate = 0.0f;
 	float m_VectorInterval = 0.2f;
-	bool m_IsColliding;
+	bool m_IsColliding = false;
 	std::vector<Entity*> m_pWallColliders;
 };
 

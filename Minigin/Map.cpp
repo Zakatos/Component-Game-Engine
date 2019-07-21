@@ -7,7 +7,7 @@
 
 //extern Manager manager;
 
-Map::Map(std::string tID, int ms, int ts) : m_TextId(tID), m_MapScale(ms), m_TileSize(ts)
+Map::Map(const std::string& tID, int ms, int ts) : m_TextId(tID), m_MapScale(ms), m_TileSize(ts)
 {
 	m_ScaledSize = ms * ts;
 	//AssetManager* pAssets = new AssetManager(&m_Manager);

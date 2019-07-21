@@ -9,7 +9,7 @@ class Map
 {
 public:
 	 
-	Map(std::string tID, int ms, int ts);
+	Map(const std::string& tID, int ms, int ts);
 	~Map();
 
 	void LoadMap(const std::string& path, int sizeX, int sizeY,Manager& manager);

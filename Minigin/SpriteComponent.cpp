@@ -2,12 +2,12 @@
 #include "ECS/SpriteComponent.h"
 #include "RendererComponent.h"
 
-SpriteComponent::SpriteComponent(std::string id)
+SpriteComponent::SpriteComponent(const std::string& id)
 {
 	setTex(id);
 }
 
-SpriteComponent::SpriteComponent(std::string id, bool isAnimated)
+SpriteComponent::SpriteComponent(const std::string& id, bool isAnimated)
 {
 	m_IsAnimated = isAnimated;
 
@@ -34,7 +34,7 @@ SpriteComponent::~SpriteComponent()
 	//}
 }
 
-void SpriteComponent::setTex(std::string id)
+void SpriteComponent::setTex(const std::string& id)
 {
 	m_pTexture = Game::m_sAssets->GetTexture(id);
 }

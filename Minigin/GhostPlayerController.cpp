@@ -12,9 +12,6 @@ GhostPlayerController::~GhostPlayerController()
 {
 }
 
-
-
-
 void GhostPlayerController::init()
 {
 	m_pTransform = &m_pEntity->getComponent<TransformComponent>();

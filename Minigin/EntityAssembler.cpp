@@ -13,7 +13,7 @@ EntityAssembler::~EntityAssembler()
 	
 }
 
-void EntityAssembler::CreatePacMan(Vector2D pos, std::string id)
+void EntityAssembler::CreatePacMan(Vector2D pos,const std::string& id)
 {
 	auto& pacMan(m_pManager->addEntity());
 	pacMan.addComponent<TransformComponent>(pos.m_X, pos.m_Y, 32, 32, 1);
@@ -23,7 +23,7 @@ void EntityAssembler::CreatePacMan(Vector2D pos, std::string id)
 	pacMan.addGroup(Game::groupPlayers);
 }
 
-void EntityAssembler::CreatePellet(Vector2D pos, std::string id)
+void EntityAssembler::CreatePellet(Vector2D pos, const std::string& id)
 {
 	const float pelletOffset = 10.f;
 	auto& pellet(m_pManager->addEntity());
@@ -35,7 +35,7 @@ void EntityAssembler::CreatePellet(Vector2D pos, std::string id)
 	pellet.addGroup(Game::groupPellets);
 }
 
-void EntityAssembler::CreatePowerPellet(Vector2D pos, std::string id)
+void EntityAssembler::CreatePowerPellet(Vector2D pos, const std::string& id)
 {
 	const float pelletOffset = 10.f;
 	auto& powerpellet(m_pManager->addEntity());

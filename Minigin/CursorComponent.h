@@ -22,9 +22,9 @@ public:
 	void update() override;
 	
 private:
-	TransformComponent * m_pTransform;
+	TransformComponent * m_pTransform = nullptr;
 	std::shared_ptr<Command> m_Command;
 	int m_CursorPosition;
-	bool m_KeyIsDown;
+	bool m_KeyIsDown = false;
 };
 

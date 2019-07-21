@@ -29,10 +29,10 @@ public:
 	//std::map<const char*, Animation> m_Animations;
 	SDL_RendererFlip spriteFlip = SDL_FLIP_NONE;
 	SpriteComponent() = default;
-	SpriteComponent(std::string id);
-	SpriteComponent(std::string id, bool isAnimated);	
+	SpriteComponent(const std::string& id);
+	SpriteComponent(const std::string& id, bool isAnimated);	
 	~SpriteComponent();
-	void setTex(std::string id);
+	void setTex(const std::string& id);
 	void init() override;
 	void update() override;
 	void draw();

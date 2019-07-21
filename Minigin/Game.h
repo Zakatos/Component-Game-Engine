@@ -100,7 +100,7 @@ private:
 	float m_FPSTimer;
 	int m_FPSCount;
 	float m_MaxElapsedTime = 0.1f;
-	std::chrono::high_resolution_clock::time_point m_GameTime;
+	std::chrono::high_resolution_clock::time_point m_GameTime{};
 	float m_FrameTime;
 	int m_Cnt = 0;
 	SDL_Window *m_pWindow;
@@ -118,6 +118,6 @@ private:
 	bool m_IsSinglePlayerSelected = false;
 
 	//Level variables
-	std::unique_ptr<Map> m_upMap;
+	std::unique_ptr<Map> m_upMap{};
 
 };

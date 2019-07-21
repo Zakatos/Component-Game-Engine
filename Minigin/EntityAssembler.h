@@ -13,9 +13,9 @@ public:
 	~EntityAssembler();
 
 	//gameobjects
-	void CreatePacMan(Vector2D pos, std::string id);
-	void CreatePellet(Vector2D pos, std::string id);
-	void CreatePowerPellet(Vector2D pos, std::string id);
+	void CreatePacMan(Vector2D pos, const std::string& id);
+	void CreatePellet(Vector2D pos, const std::string& id);
+	void CreatePowerPellet(Vector2D pos, const std::string& id);
 	EntityAssembler(const EntityAssembler& other) = delete;
 	EntityAssembler(EntityAssembler&& other) = delete;
 	EntityAssembler& operator=(const EntityAssembler& other) = delete;

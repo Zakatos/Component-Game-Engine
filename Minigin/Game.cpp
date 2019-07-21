@@ -29,16 +29,19 @@ int Game::m_GameSceneNum =0;
 float Game::m_sElapsedsec = 0;
 
 Game::Game()
-	:m_Pacman(m_sManager.addEntity()), m_GreenGhost(m_sManager.addEntity()),
-m_BlueGhost(m_sManager.addEntity()),m_PinkGhost(m_sManager.addEntity()),
-m_RedGhost(m_sManager.addEntity()),m_FpsLabel(m_sManager.addEntity()),
-m_GameStateLabel(m_sManager.addEntity()),m_pTiles(m_sManager.getGroup(Game::groupMap)),
-m_pPlayers(m_sManager.getGroup(Game::groupPlayers)),m_pGhosts(m_sManager.getGroup(Game::groupGhosts)),
-m_pColliders(m_sManager.getGroup(Game::groupColliders)),m_pPowerPellets(m_sManager.getGroup(Game::groupPowerPellets)),
-m_pPellets(m_sManager.getGroup(Game::groupPellets)),m_MainMenu(m_sManager.addEntity()),m_LivesLabel(m_sManager.addEntity()),
-m_Cursor(m_sManager.addEntity()),m_PlayerGhost(m_sManager.addEntity()),m_MsPacman(m_sManager.addEntity()),
-m_GameInfo(m_sManager.addEntity())
-{	
+	: m_Pacman(m_sManager.addEntity()), m_GreenGhost(m_sManager.addEntity()),
+	  m_BlueGhost(m_sManager.addEntity()), m_PinkGhost(m_sManager.addEntity()),
+	  m_RedGhost(m_sManager.addEntity()), m_FpsLabel(m_sManager.addEntity()),
+	  m_GameStateLabel(m_sManager.addEntity()), m_pTiles(m_sManager.getGroup(Game::groupMap)),
+	  m_pPlayers(m_sManager.getGroup(Game::groupPlayers)), m_pGhosts(m_sManager.getGroup(Game::groupGhosts)),
+	  m_pColliders(m_sManager.getGroup(Game::groupColliders)), m_TotalTime(0), m_ElapsedTime(0), m_FPS(0),
+	  m_FPSTimer(0), m_FPSCount(0), m_FrameTime(0), m_pWindow(nullptr), m_NumberOfPellets(0),
+	  m_pPowerPellets(m_sManager.getGroup(Game::groupPowerPellets)),
+	  m_pPellets(m_sManager.getGroup(Game::groupPellets)), m_MainMenu(m_sManager.addEntity()),
+	  m_LivesLabel(m_sManager.addEntity()),
+	  m_Cursor(m_sManager.addEntity()), m_PlayerGhost(m_sManager.addEntity()), m_MsPacman(m_sManager.addEntity()),
+	  m_GameInfo(m_sManager.addEntity())
+{
 }
 
 Game::~Game()

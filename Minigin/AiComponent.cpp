@@ -161,7 +161,7 @@ void AiComponent::Reset()
 	m_pTransform->Translate(m_StartPosition);
 }
 
-void AiComponent::setSpriteName(std::string name)
+void AiComponent::setSpriteName(const std::string& name)
 {
 	m_SpriteName = name;
 }

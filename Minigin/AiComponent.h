@@ -30,7 +30,7 @@ public:
 	void CheckPlayerCollision(std::vector<Entity*>& players);
 	void Scared();
 	void Reset();
-	void setSpriteName(std::string name);
+	void setSpriteName(const std::string& name);
 	AiComponent& operator=(const AiComponent& other) = delete;
 	AiComponent& operator=(AiComponent&& other) = delete;
 private:
@@ -38,13 +38,13 @@ private:
 	void Chase();
 	void HandleDeath();
 //	GhostThread m_GhostThread;
-	TransformComponent* m_pTransform;
-	SpriteComponent* m_pSprite;
-	GhostPhysicsComponent* m_pPhysics;
-	ThreadComponent* m_pThread;
+	TransformComponent* m_pTransform = nullptr;
+	SpriteComponent* m_pSprite = nullptr;
+	GhostPhysicsComponent* m_pPhysics = nullptr;
+	ThreadComponent* m_pThread = nullptr;
 	std::string m_SpriteName;
-	State m_State;
-	Direction m_direction;
+	State m_State = State::Wandering;
+	Direction m_direction = Direction::Up;
 	Vector2D m_StartPosition;
 	//std::thread m_Thread;
 	std::mutex m_Mutex;

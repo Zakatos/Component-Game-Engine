@@ -3,7 +3,7 @@
 #include "RendererComponent.h"
 
 
-ColliderComponent::ColliderComponent(std::string t)
+ColliderComponent::ColliderComponent(const std::string& t)
 	:m_Tag(t)
 {
 	
@@ -11,7 +11,7 @@ ColliderComponent::ColliderComponent(std::string t)
 
 
 
-ColliderComponent::ColliderComponent(std::string t, int xpos, int ypos, int size)
+ColliderComponent::ColliderComponent(const std::string& t, int xpos, int ypos, int size)
 	:m_Tag(t)
 {
 	

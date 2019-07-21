@@ -31,15 +31,15 @@ public:
 	PlayerController& operator=(const PlayerController& other) = delete;
 	PlayerController& operator=(PlayerController&& other) = delete;
 private:
-	TransformComponent* m_pTransform;
-	SpriteComponent* m_pSprite;
-	PlayerPhysicsComponent* m_Physics;
-	InputComponent* m_InputComponent;
-	Direction m_Direction;
+	TransformComponent* m_pTransform = nullptr;
+	SpriteComponent* m_pSprite = nullptr;
+	PlayerPhysicsComponent* m_Physics = nullptr;
+	InputComponent* m_InputComponent = nullptr;
+	Direction m_Direction = Direction::Up;
 	bool m_IsPowered = false;
 	bool m_isEaten = false;
 	float m_PoweredTimer = 0.0f;
-	int m_Lives;
+	int m_Lives = 0;
 	Vector2D m_StartPoint;
 
 };
