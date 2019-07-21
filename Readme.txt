@@ -17,3 +17,4 @@ different input devices and call entity actions.
   -Adding a scenegraph
   -Post initialization and introduction of a fixed update.
   -Events for communication between unrelated entities. 
+  -Const correctness 
