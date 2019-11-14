@@ -13,8 +13,7 @@ different input devices and call entity actions.
 
 -Need more work/Future improvements or additions
   -Threading especially in the part of joining.
-  -Collision detection and how the physics currently work
-  -Adding a scenegraph
-  -Post initialization and introduction of a fixed update.
-  -Events for communication between unrelated entities. 
-  -Const correctness 
+  -Collision detection and how the physics currently work.
+  -Adding a scenegraph.
+  -Events for communication between unrelated entities(Messaging system/Observer pattern implementation probably). 
+  -Const correctness.
